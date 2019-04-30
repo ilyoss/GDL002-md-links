@@ -6,7 +6,7 @@
     "jest": "^24.7.1"
   },
   "scripts": {
-    "test": "jest"
+    "test": "jest --coverage"
   },
   "jest": {
     "transform": {
@@ -14,6 +14,26 @@
     }
   },
   "dependencies": {
-    "file-system": "^2.2.2"
+    "chalk": "^2.4.2",
+    "figlet": "^1.2.1",
+    "file-system": "^2.2.2",
+    "inquirer": "^6.3.1",
+    "shelljs": "^0.8.3",
+    "yargs": "^13.2.2"
+  },
+  "description": "[Markdown](https://es.wikipedia.org/wiki/Markdown) es un lenguaje de marcado\r ligero muy popular entre developers. Es usado en muchísimas plataformas que\r manejan texto plano (GitHub, foros, blogs, ...), y es muy común\r encontrar varios archivos en ese formato en cualquier tipo de repositorio\r (empezando por el tradicional `README.md`).",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ilyoss/GDL002-md-links.git"
+  },
+  "author": "Iliana Trevino Ayala",
+  "license": "ISC",
+  "homepage": "https://github.com/ilyoss/GDL002-md-links#readme",
+  "bin": {
+    "md-links": "./index.js"
   }
 }
