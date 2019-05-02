@@ -17,7 +17,7 @@ const init = () => {
     )
   );
   console.log(chalk.bold.white("Welcome to md-links! Start by writing 'md-links' in your terminal, followed by the path to your file."));
-  console.log(chalk.gray("Example: md-links /mypath.md"));
+  console.log(chalk.gray("Example: md-links Prueba\\README.md"));
 }
 init();
 // I run my mdlinks function
