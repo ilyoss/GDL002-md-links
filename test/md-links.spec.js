@@ -1,34 +1,35 @@
-const mdLinks = require('../index.js');
+const mdLinks = require('../src/index.js');
+const validation = require('../src/validation.js');
 
 describe('mdLinks', () => {
   test('is an object', () => {
-   expect(typeof mdLinks).toBe('object');
+   expect(typeof mdLinks).toBe('function');
   });
 });
 
 describe('absolutePath', () => {
   it('Should be a function', () => {
-    expect(typeof mdLinks.absolutePath).toBe('function');
+    expect(typeof validation.checkPath).toBe('function');
   });
 
   it('Should validate if path is absolute', () => {
-    expect(mdLinks.absolutePath('/test/demo_path.js')).toBe(true);
+    expect(validation.checkPath('/test/demo_path.js')).toBe(true);
   });
 });
 
 describe('relativePath', () => {
   it('Should be a function', () => {
-    expect(typeof mdLinks.relativePath).toBe('function');
+    expect(typeof validation.checkPath).toBe('function');
   });
 
   it('Should turn path to absolute', () => {
-    expect(mdLinks.relativePath('files')).toBe('C:\\Users\\ilytr\\Desktop\\Laboratoria\\MD-Links\\files');
+    expect(validation.checkPath('files')).toBe('C:\\Users\\ilytr\\Desktop\\Laboratoria\\MD-Links\\files');
   });
 });
 
-describe('existingPath', () => {
+describe('readPath', () => {
   it('Should be a function', () => {
-    expect(typeof mdLinks.existingPath).toBe('function');
+    expect(typeof validation.readPath).toBe('function');
   });
 
   it('Should be "true" after it validates that the file exists', () => {
